@@ -7,4 +7,5 @@
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_specials">SpecialsActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_renton_maps">Map1</string>
 </resources>

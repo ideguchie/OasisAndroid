@@ -1,12 +1,9 @@
 package com.app.oasis.oasismobileapp;
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -26,10 +23,6 @@ public class LocationActivity extends FragmentActivity
                 .findFragmentById(R.id.mapRenton);
         mapFragment.getMapAsync(this);
 
-//        WebView webview = (WebView) findViewById(R.id.webView1);
-//        webview.setWebViewClient(new WebViewClient());
-//        webview.getSettings().setJavaScriptEnabled(true);
-//        webview.loadUrl("http://maps.google.com/maps?" + "&daddr=47.469971, -122.212281");
     }
 
     @Override
