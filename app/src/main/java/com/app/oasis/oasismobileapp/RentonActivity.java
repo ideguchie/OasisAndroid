@@ -1,7 +1,7 @@
 package com.app.oasis.oasismobileapp;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -13,7 +13,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class RentonActivity extends FragmentActivity
+public class RentonActivity extends AppCompatActivity
         implements OnMapReadyCallback {
 
     @Override
