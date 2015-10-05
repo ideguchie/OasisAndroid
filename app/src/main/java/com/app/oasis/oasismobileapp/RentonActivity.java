@@ -1,7 +1,7 @@
 package com.app.oasis.oasismobileapp;
 
-import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -13,7 +13,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class LocationActivity extends FragmentActivity
+public class RentonActivity extends FragmentActivity
         implements OnMapReadyCallback {
 
     @Override
@@ -33,7 +33,7 @@ public class LocationActivity extends FragmentActivity
         map.addMarker(new MarkerOptions()
                 .position(renton)
                 .title("Oasis Tea Zone Renton"));
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(renton,15.0f);
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(renton, 15.0f);
         map.moveCamera(cameraUpdate);
     }
 

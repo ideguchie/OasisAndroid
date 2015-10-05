@@ -1,13 +1,13 @@
 package com.app.oasis.oasismobileapp;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    //Called when Location button is clicked to open Location Activity
+    //Called when About Us button is clicked to open About Activity
     public void openAbout(View view) {
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
@@ -45,17 +45,17 @@ public class MainActivity extends Activity {
 
     //Called when Location button is clicked to open Location Activity
     public void openLocation(View view) {
-        Intent intent = new Intent(this, LocationActivity.class);
+        Intent intent = new Intent(this, RentonActivity.class);
         startActivity(intent);
     }
 
-    //Called when Location button is clicked to open Location Activity
+    //Called when Menu button is clicked to open Menu Activity
     public void openMenu(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
 
-    //Called when Location button is clicked to open Location Activity
+    //Called when Specials button is clicked to open Specials Activity
     public void openSpecials(View view) {
         Intent intent = new Intent(this, SpecialsActivity.class);
         startActivity(intent);
