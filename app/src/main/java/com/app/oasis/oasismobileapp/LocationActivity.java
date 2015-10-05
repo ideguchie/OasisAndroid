@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -27,9 +29,12 @@ public class LocationActivity extends FragmentActivity
 
     @Override
     public void onMapReady(GoogleMap map) {
+        LatLng renton = new LatLng(47.469903, -122.212349);
         map.addMarker(new MarkerOptions()
-                .position(new LatLng(0, 0))
-                .title("Marker"));
+                .position(renton)
+                .title("Oasis Tea Zone Renton"));
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(renton,15.0f);
+        map.moveCamera(cameraUpdate);
     }
 
     @Override
