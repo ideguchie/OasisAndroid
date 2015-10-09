@@ -16,6 +16,7 @@
         android:onClick="openLocation"
         android:background="@drawable/custombutton"
         android:layout_below="@+id/buttonAbout"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -26,6 +27,7 @@
         android:id="@+id/buttonMenu"
         android:background="@drawable/custombutton"
         android:layout_below="@+id/buttonLocations"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true"
         android:onClick="openMenu" />
 
@@ -39,6 +41,7 @@
         android:background="@drawable/custombutton"
         android:layout_alignLeft="@+id/buttonMenu"
         android:layout_alignStart="@+id/buttonMenu"
+        android:layout_marginBottom="15dp"
         android:onClick="openSpecials" />
 
     <Button
@@ -49,6 +52,7 @@
         android:id="@+id/buttonStamp"
         android:background="@drawable/custombutton"
         android:layout_below="@+id/buttonSpecials"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -60,6 +64,7 @@
         android:background="@drawable/custombutton"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
         android:onClick="openAbout" />
 
 </RelativeLayout>
