@@ -6,31 +6,33 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.app.oasis.oasismobileapp.LocationActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Hours: Mon-Thur 11am-7pm\n        Fri-Sun 11am-8pm"
-        android:id="@+id/textHoursRenton"
+        android:text="Renton"
+        android:id="@+id/rentonButton"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:background="@drawable/custombutton"
+        android:layout_centerHorizontal="true"
+        android:onClick="openRenton" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Phone: "
-        android:id="@+id/textPhoneRenton"
-        android:layout_below="@+id/textHoursRenton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:text="Seattle"
+        android:id="@+id/seattleButton"
+        android:layout_below="@+id/rentonButton"
+        android:background="@drawable/custombutton"
+        android:layout_centerHorizontal="true"
+        android:onClick="openSeattle" />
 
-    <fragment
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:id="@+id/mapRenton"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textPhoneRenton" />
-
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="UW"
+        android:id="@+id/uwButton"
+        android:layout_below="@+id/seattleButton"
+        android:background="@drawable/custombutton"
+        android:layout_centerHorizontal="true"
+        android:onClick="openUW" />
 </RelativeLayout>

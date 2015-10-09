@@ -9,4 +9,6 @@
     <string name="title_activity_menu">MenuActivity</string>
     <string name="title_activity_renton_maps">Map1</string>
     <string name="title_activity_renton">RentonActivity</string>
+    <string name="title_activity_seattle">SeattleActivity</string>
+    <string name="title_activity_uw">UWActivity</string>
 </resources>

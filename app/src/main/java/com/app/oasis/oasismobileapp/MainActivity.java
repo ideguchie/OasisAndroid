@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Called when Location button is clicked to open Location Activity
     public void openLocation(View view) {
-        Intent intent = new Intent(this, RentonActivity.class);
+        Intent intent = new Intent(this, LocationActivity.class);
         startActivity(intent);
     }
 

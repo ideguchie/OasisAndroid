@@ -13,34 +13,34 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class RentonActivity extends AppCompatActivity
+public class SeattleActivity extends AppCompatActivity
         implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_renton);
+        setContentView(R.layout.activity_seattle);
 
         MapFragment mapFragment = (MapFragment) getFragmentManager()
-                .findFragmentById(R.id.mapRenton);
+                .findFragmentById(R.id.mapSeattle);
         mapFragment.getMapAsync(this);
 
     }
 
     @Override
     public void onMapReady(GoogleMap map) {
-        LatLng renton = new LatLng(47.469903, -122.212349);
+        LatLng seattle = new LatLng(47.597653, -122.326524);
         map.addMarker(new MarkerOptions()
-                .position(renton)
-                .title("Oasis Tea Zone Renton"));
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(renton, 16.0f);
+                .position(seattle)
+                .title("Oasis Tea Zone Seattle"));
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(seattle, 16.0f);
         map.moveCamera(cameraUpdate);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_renton, menu);
+        getMenuInflater().inflate(R.menu.menu_seattle, menu);
         return true;
     }
 

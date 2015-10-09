@@ -1,40 +1,19 @@
 package com.app.oasis.oasismobileapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-public class LocationActivity extends FragmentActivity
-        implements OnMapReadyCallback {
+public class LocationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
 
-        MapFragment mapFragment = (MapFragment) getFragmentManager()
-                .findFragmentById(R.id.mapRenton);
-        mapFragment.getMapAsync(this);
-
-    }
-
-    @Override
-    public void onMapReady(GoogleMap map) {
-        LatLng renton = new LatLng(47.469903, -122.212349);
-        map.addMarker(new MarkerOptions()
-                .position(renton)
-                .title("Oasis Tea Zone Renton"));
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(renton,15.0f);
-        map.moveCamera(cameraUpdate);
     }
 
     @Override
@@ -58,4 +37,23 @@ public class LocationActivity extends FragmentActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+    //Called when Renton button is clicked to open Renton Activity
+    public void openRenton(View view) {
+        Intent intent = new Intent(this, RentonActivity.class);
+        startActivity(intent);
+    }
+
+    //Called when Seattle button is clicked to open Seattle Activity
+    public void openSeattle(View view) {
+        Intent intent = new Intent(this, SeattleActivity.class);
+        startActivity(intent);
+    }
+
+    //Called when UW button is clicked to open UW Activity
+    public void openUW(View view) {
+        Intent intent = new Intent(this, UWActivity.class);
+        startActivity(intent);
+    }
+
 }

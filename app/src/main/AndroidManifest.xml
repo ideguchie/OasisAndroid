@@ -54,6 +54,14 @@
             android:name=".RentonActivity"
             android:label="@string/title_activity_renton" >
         </activity>
+        <activity
+            android:name=".SeattleActivity"
+            android:label="@string/title_activity_seattle" >
+        </activity>
+        <activity
+            android:name=".UWActivity"
+            android:label="@string/title_activity_uw" >
+        </activity>
     </application>
 
 </manifest>
