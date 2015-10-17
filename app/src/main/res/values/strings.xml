@@ -11,5 +11,4 @@
     <string name="title_activity_renton">RentonActivity</string>
     <string name="title_activity_seattle">SeattleActivity</string>
     <string name="title_activity_uw">UWActivity</string>
-    <string name="title_activity_list">ListActivity</string>
 </resources>

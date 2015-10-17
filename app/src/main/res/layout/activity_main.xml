@@ -53,7 +53,8 @@
         android:background="@drawable/custombutton"
         android:layout_below="@+id/buttonSpecials"
         android:layout_marginBottom="15dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="openStamp" />
 
     <Button
         android:layout_width="fill_parent"

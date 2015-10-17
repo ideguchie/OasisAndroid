@@ -60,4 +60,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SpecialsActivity.class);
         startActivity(intent);
     }
+
+    //Called when Stamp button is clicked to open Stamp Card Activity
+    public void openStamp(View view) {
+        Intent intent = new Intent(this, testMainActivity.class);
+        startActivity(intent);
+    }
+
 }
