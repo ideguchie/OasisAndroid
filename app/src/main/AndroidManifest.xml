@@ -62,14 +62,6 @@
             android:name=".UWActivity"
             android:label="@string/title_activity_uw" >
         </activity>
-        <activity
-            android:name=".testMainActivity"
-            android:label="@string/title_activity_test_main" >
-        </activity>
-        <activity
-            android:name=".ListActivity"
-            android:label="@string/title_activity_list" >
-        </activity>
     </application>
 
 </manifest>
