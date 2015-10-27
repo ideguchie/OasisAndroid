@@ -1,31 +1,35 @@
 package com.app.oasis.oasismobileapp;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import java.util.ArrayList;
 
 /**
  * Created by Elliot on 10/17/2015.
  */
 public class ImagePagerAdapter extends FragmentPagerAdapter {
 
+    private ArrayList<Integer> images;
+
     public ImagePagerAdapter(FragmentManager fm) {
         super(fm);
+        images = new ArrayList<>();
+        images.add(R.drawable.tea);
+        images.add(R.drawable.popcorn);
+        images.add(R.drawable.taro);
     }
     @Override
     public Fragment getItem(int i) {
-        Fragment fragment = new FeaturedFragment();
-        Bundle args = new Bundle();
-        // Our object is just an integer :-P
-        args.putInt(FeaturedFragment.ARG_OBJECT, i + 1);
-        fragment.setArguments(args);
-        return fragment;
+        FeaturedFragment f = FeaturedFragment.newInstance();
+        f.setImageList(images.get(i));
+        return f;
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return images.size();
     }
 
     @Override

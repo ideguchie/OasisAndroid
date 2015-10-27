@@ -11,4 +11,15 @@
     <string name="title_activity_renton">RentonActivity</string>
     <string name="title_activity_seattle">SeattleActivity</string>
     <string name="title_activity_uw">UWActivity</string>
+    <string name="hello_blank_fragment">Blank Fragment</string>
+    <string-array name="list_items">
+        <item>Home</item>
+        <item>Specials</item>
+        <item>Menu</item>
+        <item>About Us</item>
+        <item>Login</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
 </resources>
