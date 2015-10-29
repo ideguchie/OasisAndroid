@@ -14,7 +14,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+import com.viewpagerindicator.CirclePageIndicator;
+
+public class MainActivity extends AppCompatActivity implements FeaturedFragment.OnFragmentInteractionListener {
 
     private ListView mDrawerList;
     private DrawerLayout mDrawerLayout;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private CharSequence mTitle;
     private CharSequence mDrawerTitle;
+    private CirclePageIndicator mIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(new ImagePagerAdapter(getSupportFragmentManager()));
+
+        mIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+//        mIndicator.setFades(false);
+        mIndicator.setViewPager(pager);
     }
 
     private void addDrawerItem() {
@@ -81,19 +88,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectItem(int i) {
         switch (i) {
-            case 1: {
+            case 0: {
                 Intent intent = new Intent(this, SpecialsActivity.class);
                 startActivity(intent);
                 break;
             }
-            case 2: {
+            case 1: {
                 Intent intent = new Intent(this, MenuActivity.class);
                 startActivity(intent);
                 break;
             }
-            case 3: {
+            case 2: {
                 Intent intent = new Intent(this, AboutActivity.class);
                 startActivity(intent);
+                break;
+            }
+            case 3: {
                 break;
             }
         }
@@ -150,5 +160,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onFragmentInteraction(){
+
+    }
+
+    public void openLocation (View view) {
+        Intent intent = new Intent(this, LocationActivity.class);
+        startActivity(intent);
     }
 }

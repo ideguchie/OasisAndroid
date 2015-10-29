@@ -13,7 +13,6 @@
     <string name="title_activity_uw">UWActivity</string>
     <string name="hello_blank_fragment">Blank Fragment</string>
     <string-array name="list_items">
-        <item>Home</item>
         <item>Specials</item>
         <item>Menu</item>
         <item>About Us</item>
